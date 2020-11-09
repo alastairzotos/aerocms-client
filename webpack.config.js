@@ -51,22 +51,22 @@ module.exports = {
         }
     },
 
-    externals: {
-        react: {
-            root: 'React',
-            commonjs2: 'react',
-            commonjs: 'react',
-            amd: 'react',
-            umd: 'react',
-        },
-        'react-router-dom': {
-            root: 'ReactRouterDOM',
-            commonjs2: 'react-router-dom',
-            commonjs: 'react-router-dom',
-            amd: 'react-router-dom',
-            umd: 'react-router-dom',
-        }
-    },
+    // externals: {
+    //     react: {
+    //         root: 'React',
+    //         commonjs2: 'react',
+    //         commonjs: 'react',
+    //         amd: 'react',
+    //         umd: 'react',
+    //     },
+    //     'react-router-dom': {
+    //         root: 'ReactRouterDOM',
+    //         commonjs2: 'react-router-dom',
+    //         commonjs: 'react-router-dom',
+    //         amd: 'react-router-dom',
+    //         umd: 'react-router-dom',
+    //     }
+    // },
 
     output: {
         filename: '[name].js',
