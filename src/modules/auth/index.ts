@@ -4,5 +4,6 @@ import { pages } from './pages';
 
 export const authModule: Module = {
     name: 'auth',
-    pages
+    pages,
+    reducer: (state = {}) => state
 };

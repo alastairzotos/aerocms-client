@@ -13,7 +13,7 @@ const parseModulesToAlias = (p) =>
         }), {});
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
 
     entry: {
         index: path.resolve(__dirname, 'src/index.ts'),

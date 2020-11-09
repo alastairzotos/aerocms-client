@@ -4,7 +4,7 @@ import { combineModules, CoreApp, Module } from './core';
 import { authModule } from './modules/auth';
 
 export interface IAppProps {
-    modules: Module[];
+    modules?: Module[];
 }
 
 export const App: React.FC<IAppProps> = ({ modules }) => {
@@ -13,7 +13,7 @@ export const App: React.FC<IAppProps> = ({ modules }) => {
             mod={
                 combineModules('app', [
                     authModule,
-                    ...modules
+                    ...(modules ? modules : [])
                 ])
             }
         />
