@@ -1,5 +1,21 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
-export const App: React.FC = () =>
-    <p>start</p>;
+import { combineModules, CoreApp, Module } from './core';
+import { authModule } from './modules/auth';
+
+export interface IAppProps {
+    modules: Module[];
+}
+
+export const App: React.FC<IAppProps> = ({ modules }) => {
+    return (
+        <CoreApp
+            mod={
+                combineModules('app', [
+                    authModule,
+                    ...modules
+                ])
+            }
+        />
+    );
+};
