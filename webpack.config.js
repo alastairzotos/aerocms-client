@@ -45,10 +45,10 @@ module.exports = {
 
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.css'],
-        // alias: {
-        //     '~': srcDir,
-        //     ...parseModulesToAlias(`${srcDir}/modules`),
-        // }
+        alias: {
+            '~': srcDir,
+            ...parseModulesToAlias(`${srcDir}/modules`),
+        }
     },
 
     externals: {
