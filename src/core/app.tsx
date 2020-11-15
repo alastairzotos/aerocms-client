@@ -30,11 +30,14 @@ export const CoreApp: React.FC<ICoreAppProps> = ({ mod }) => {
     const persistor = persistStore(store);
 
     return (
-        <Root
-            store={store}
-            history={createBrowserHistory()}
-            pages={mod.pages}
-            persistor={persistor}
-        />
+        <>
+            <p>core app</p>
+            <Root
+                store={store}
+                history={createBrowserHistory()}
+                pages={mod.pages}
+                persistor={persistor}
+            />
+        </>
     );
 };
