@@ -21,26 +21,26 @@ const RouteSwitch: React.FC<{
 }> = ({
     pages
 }) => {
-    console.log('INSIDE THE DAMN ROUTER SWITCH');
+        console.log('INSIDE THE DAMN ROUTER SWITCH');
 
-    return (
-        <Switch>
-            {
-                Object.keys(pages).map(url => {
-                    console.log(url);
-                    return (
-                        <Route
-                            key={url}
-                            path={url}
-                            exact
-                            component={pages[url]}
-                        />
-                    );
-                })
-            }
-        </Switch>
-    );
-};
+        return (
+            <Switch>
+                {
+                    Object.keys(pages).map(url => {
+                        console.log(url);
+                        return (
+                            <Route
+                                key={url}
+                                path={url}
+                                exact
+                                component={pages[url]}
+                            />
+                        );
+                    })
+                }
+            </Switch>
+        );
+    };
 
 // const WithRouterSwitch = withRouter(RouteSwitch);
 
@@ -50,11 +50,11 @@ export const Root: React.FC<RootProps> = ({
     pages,
     persistor
 }) => (
-    <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
+        <Provider store={store}>
             <BrowserRouter>
-                <RouteSwitch pages={pages} />
+                <PersistGate loading={null} persistor={persistor}>
+                    <RouteSwitch pages={pages} />
+                </PersistGate>
             </BrowserRouter>
-        </PersistGate>
-    </Provider>
-);
+        </Provider>
+    );
