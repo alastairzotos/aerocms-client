@@ -8,7 +8,7 @@
 	"compilerOptions": {
 		"moduleResolution": "node",
 		"target": "es5",
-		"sourceMap": true,
+		"sourceMap": false,
 		"jsx": "react",
 		"rootDir": "src",
 		"outDir": "dist",
