@@ -18,12 +18,10 @@ interface RootProps {
 
 const RouteSwitch: React.FC<{
     pages: Pages
-} & RouteComponentProps> = ({
-    pages,
-    location
+}> = ({
+    pages
 }) => {
     console.log('INSIDE THE DAMN ROUTER SWITCH');
-    console.log(location);
 
     return (
         <Switch>
@@ -44,7 +42,7 @@ const RouteSwitch: React.FC<{
     );
 };
 
-const WithRouterSwitch = withRouter(RouteSwitch);
+// const WithRouterSwitch = withRouter(RouteSwitch);
 
 export const Root: React.FC<RootProps> = ({
     store,
@@ -53,10 +51,10 @@ export const Root: React.FC<RootProps> = ({
     persistor
 }) => (
     <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
+        {/* <PersistGate loading={null} persistor={persistor}> */}
             <BrowserRouter>
-                <WithRouterSwitch pages={pages} />
+                <RouteSwitch pages={pages} />
             </BrowserRouter>
-        </PersistGate>
+        {/* </PersistGate> */}
     </Provider>
 );
