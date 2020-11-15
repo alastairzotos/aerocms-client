@@ -23,7 +23,7 @@ const RouteSwitch: React.FC<{
     location
 }) => {
     console.log(location);
-    
+
     return (
         <Switch>
             {
