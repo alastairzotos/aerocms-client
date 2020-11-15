@@ -21,13 +21,14 @@ const RouteSwitch: React.FC<{
 } & RouteComponentProps> = ({
     pages,
     location
-}) => (
+}) => {
+    console.log(location);
+    
+    return (
         <Switch>
             {
                 Object.keys(pages).map(url => {
-                    console.log(location);
                     console.log(url);
-                    console.log('--------');
                     return (
                         <Route
                             key={url}
@@ -40,6 +41,7 @@ const RouteSwitch: React.FC<{
             }
         </Switch>
     );
+};
 
 const WithRouterSwitch = withRouter(RouteSwitch);
 
