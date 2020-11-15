@@ -37,7 +37,7 @@ const RouteSwitch: React.FC<{
         </Switch>
     );
 
-const WithRouterSwitch = withRouter(RouteSwitch);
+// const WithRouterSwitch = withRouter(RouteSwitch);
 
 export const Root: React.FC<RootProps> = ({
     store,
@@ -48,7 +48,7 @@ export const Root: React.FC<RootProps> = ({
     <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
             <BrowserRouter>
-                <WithRouterSwitch pages={pages} />
+                <RouteSwitch pages={pages} />
             </BrowserRouter>
         </PersistGate>
     </Provider>
