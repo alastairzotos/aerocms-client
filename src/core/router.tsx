@@ -51,10 +51,10 @@ export const Root: React.FC<RootProps> = ({
     persistor
 }) => (
     <Provider store={store}>
-        {/* <PersistGate loading={null} persistor={persistor}> */}
+        <PersistGate loading={null} persistor={persistor}>
             <BrowserRouter>
                 <RouteSwitch pages={pages} />
             </BrowserRouter>
-        {/* </PersistGate> */}
+        </PersistGate>
     </Provider>
 );
