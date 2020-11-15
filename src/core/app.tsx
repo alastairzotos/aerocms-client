@@ -29,11 +29,8 @@ export const CoreApp: React.FC<ICoreAppProps> = ({ mod }) => {
 
     const persistor = persistStore(store);
 
-    console.log(mod);
-
     return (
         <>
-            <p>core app</p>
             <Root
                 store={store}
                 history={createBrowserHistory()}
