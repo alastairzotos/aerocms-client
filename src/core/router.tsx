@@ -22,6 +22,7 @@ const RouteSwitch: React.FC<{
     pages,
     location
 }) => {
+    console.log('INSIDE THE DAMN ROUTER SWITCH');
     console.log(location);
 
     return (
