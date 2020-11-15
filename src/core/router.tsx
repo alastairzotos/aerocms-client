@@ -19,11 +19,15 @@ interface RootProps {
 const RouteSwitch: React.FC<{
     pages: Pages
 } & RouteComponentProps> = ({
-    pages
+    pages,
+    location
 }) => (
         <Switch>
             {
                 Object.keys(pages).map(url => {
+                    console.log(location);
+                    console.log(url);
+                    console.log('--------');
                     return (
                         <Route
                             key={url}
@@ -37,7 +41,7 @@ const RouteSwitch: React.FC<{
         </Switch>
     );
 
-// const WithRouterSwitch = withRouter(RouteSwitch);
+const WithRouterSwitch = withRouter(RouteSwitch);
 
 export const Root: React.FC<RootProps> = ({
     store,
@@ -48,7 +52,7 @@ export const Root: React.FC<RootProps> = ({
     <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
             <BrowserRouter>
-                <RouteSwitch pages={pages} />
+                <WithRouterSwitch pages={pages} />
             </BrowserRouter>
         </PersistGate>
     </Provider>
