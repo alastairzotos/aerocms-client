@@ -1,4 +1,4 @@
-import { Module } from '~/core';
+import { Module } from '@aerocms/client-core';
 
 import { pages } from './pages';
 

@@ -1,6 +1,6 @@
+import { App as CoreApp, Module } from '@aerocms/client-core';
 import * as React from 'react';
 
-import { combineModules, CoreApp, Module } from './core';
 import { authModule } from './modules/auth';
 
 export interface IAppProps {
@@ -10,12 +10,10 @@ export interface IAppProps {
 export const App: React.FC<IAppProps> = ({ modules }) => {
     return (
         <CoreApp
-            mod={
-                combineModules('app', [
-                    authModule,
-                    ...(modules ? modules : [])
-                ])
-            }
+            modules={[
+                authModule,
+                ...(modules ? modules : [])
+            ]}
         />
     );
 };

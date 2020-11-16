@@ -1,5 +1,5 @@
+import { Pages } from '@aerocms/client-core';
 import loadable from '@loadable/component';
-import { Pages } from '~/core';
 
 import LoginPage from './LoginPage';
 
